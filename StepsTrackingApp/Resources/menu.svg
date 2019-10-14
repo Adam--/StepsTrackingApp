@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="14" height="14" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="menu" clip-path="url(#clip-path)">
+    <g transform="translate(-598 -58)">
+      <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(598 58)" fill="#fff" stroke="#2b2c34" stroke-width="1">
+        <rect width="6" height="6" stroke="none"/>
+        <rect x="0.5" y="0.5" width="5" height="5" fill="none"/>
+      </g>
+    </g>
+    <g transform="translate(-590 -58)">
+      <g id="Rectangle_1-2" data-name="Rectangle 1" transform="translate(598 58)" fill="#fff" stroke="#2b2c34" stroke-width="1">
+        <rect width="6" height="6" stroke="none"/>
+        <rect x="0.5" y="0.5" width="5" height="5" fill="none"/>
+      </g>
+    </g>
+    <g transform="translate(-598 -50)">
+      <g id="Rectangle_1-3" data-name="Rectangle 1" transform="translate(598 58)" fill="#fff" stroke="#2b2c34" stroke-width="1">
+        <rect width="6" height="6" stroke="none"/>
+        <rect x="0.5" y="0.5" width="5" height="5" fill="none"/>
+      </g>
+    </g>
+    <g transform="translate(-590 -50)">
+      <g id="Rectangle_1-4" data-name="Rectangle 1" transform="translate(598 58)" fill="#fff" stroke="#2b2c34" stroke-width="1">
+        <rect width="6" height="6" stroke="none"/>
+        <rect x="0.5" y="0.5" width="5" height="5" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
