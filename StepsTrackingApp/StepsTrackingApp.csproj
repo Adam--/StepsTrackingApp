@@ -12,7 +12,11 @@
   <ItemGroup>
     <None Remove="Resources\background-bottom-left.svg" />
     <None Remove="Resources\background-top-right.svg" />
+    <None Remove="Resources\clock.svg" />
+    <None Remove="Resources\map.svg" />
     <None Remove="Resources\menu.svg" />
+    <None Remove="Resources\pulse.svg" />
+    <None Remove="Resources\sneaker.svg" />
     <None Remove="Resources\walking-woman.svg" />
   </ItemGroup>
 
@@ -25,7 +29,17 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\background-bottom-left.svg" />
     <EmbeddedResource Include="Resources\background-top-right.svg" />
+    <EmbeddedResource Include="Resources\clock.svg" />
+    <EmbeddedResource Include="Resources\map.svg" />
     <EmbeddedResource Include="Resources\menu.svg" />
+    <EmbeddedResource Include="Resources\pulse.svg" />
+    <EmbeddedResource Include="Resources\sneaker.svg" />
     <EmbeddedResource Include="Resources\walking-woman.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="DetailsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

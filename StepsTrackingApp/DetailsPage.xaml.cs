@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace StepsTrackingApp
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
-    [DesignTimeVisible(false)]
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class DetailsPage : ContentPage
     {
-        public MainPage()
+        public DetailsPage()
         {
             InitializeComponent();
         }
@@ -22,7 +21,7 @@ namespace StepsTrackingApp
         {
             await this.MenuButton.FadeTo(0, 25);
             await this.MenuButton.FadeTo(1, 25);
-            await this.Navigation.PushModalAsync(new DetailsPage());
+            await this.Navigation.PopModalAsync();
         }
     }
 }

@@ -22,6 +22,11 @@
                 <Setter Property="TextColor" Value="#B3B3B3" />
             </Style>
 
+            <Style x:Key="SubtitleLight" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#ffffff" />
+            </Style>
+            
             <Style x:Key="BigData" TargetType="Label">
                 <Setter Property="FontSize" Value="58" />
                 <Setter Property="TextColor" Value="#000000" />
@@ -31,6 +36,12 @@
                 <Setter Property="FontSize" Value="23" />
                 <Setter Property="TextColor" Value="#35394E" />
             </Style>
+            
+            <Style x:Key="LittleDataLight" TargetType="Label">
+                <Setter Property="FontSize" Value="23" />
+                <Setter Property="TextColor" Value="#ffffff" />
+            </Style>
+                      
             
         </ResourceDictionary>
     </Application.Resources>
