@@ -9,11 +9,11 @@
 
     <Grid RowSpacing="0" Padding="0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="1.2*" />
+            <RowDefinition Height="120" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="3*" />
         </Grid.RowDefinitions>
         
         <ffimageloadingsvg:SvgCachedImage 
