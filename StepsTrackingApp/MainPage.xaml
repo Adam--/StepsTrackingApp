@@ -35,19 +35,29 @@
             Margin="-10,0,0,-10"
             Source="resource://StepsTrackingApp.Resources.background-bottom-left.svg"/>
 
-        <ffimageloadingsvg:SvgCachedImage
+        <ContentView 
+            x:Name="MenuButton"             
             Grid.Row="0"
+            Margin="29"
+            HeightRequest="32"
+            WidthRequest="32"
             HorizontalOptions="Start"
-            VerticalOptions="Start"
-            Margin="38"
-            HeightRequest="14"
-            WidthRequest="14"
-            Source="resource://StepsTrackingApp.Resources.menu.svg"/>
+            VerticalOptions="Start">
+            <ContentView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="MenuTapGestureRecognizer_Tapped" />
+            </ContentView.GestureRecognizers>
+            <ffimageloadingsvg:SvgCachedImage
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="14"
+                WidthRequest="14"            
+                Source="resource://StepsTrackingApp.Resources.menu.svg" />
+        </ContentView>
 
-        <Label Grid.Row="0" VerticalOptions="End" Margin="38,0" FontSize="26" Text="Hello, Christina." TextColor="#000000"/>
-        <Label Grid.Row="1" Margin="38,0" VerticalOptions="End" FontSize="14" Text="Sunday, October 13" />
-        <Label Grid.Row="2" Margin="38,0" VerticalOptions="End" FontSize="58" Text="8,900" TextColor="#000000" />
-        <Label Grid.Row="3" Margin="38,0" VerticalOptions="End" FontSize="14" Text="Steps" />
+        <Label Grid.Row="0" VerticalOptions="End" Margin="38,0" Text="Hello, Christina." Style="{StaticResource Title}"/>
+        <Label Grid.Row="1" Margin="38,0" VerticalOptions="End" Text="Sunday, October 13" Style="{StaticResource Subtitle}" />
+        <Label Grid.Row="2" Margin="38,0" VerticalOptions="End" Text="8,900" Style="{StaticResource BigData}" />
+        <Label Grid.Row="3" Margin="38,0" VerticalOptions="End" Text="Steps" Style="{StaticResource Subtitle}"/>
 
         <ffimageloadingsvg:SvgCachedImage
             Grid.Row="4"

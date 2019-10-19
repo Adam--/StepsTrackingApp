@@ -17,5 +17,11 @@ namespace StepsTrackingApp
         {
             InitializeComponent();
         }
+
+        private async void MenuTapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await this.MenuButton.FadeTo(0, 25);
+            await this.MenuButton.FadeTo(1, 25);
+        }
     }
 }
