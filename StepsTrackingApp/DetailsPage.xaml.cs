@@ -15,6 +15,8 @@ namespace StepsTrackingApp
         public DetailsPage()
         {
             InitializeComponent();
+
+            this.StaticMapImage.Source = $"https://api.mapbox.com/styles/v1/mapbox/light-v9/static/-82.9332,40.1261,13.58,0,0/300x200@2x?access_token={ApiKeys.MAPBOX_API_KEY}";
         }
 
         private async void MenuTapGestureRecognizer_Tapped(object sender, EventArgs e)
