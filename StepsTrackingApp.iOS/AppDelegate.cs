@@ -25,6 +25,7 @@ namespace StepsTrackingApp.iOS
             global::Xamarin.Forms.Forms.Init();
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             FFImageLoading.Forms.Platform.CachedImageRenderer.InitImageSourceHandler();
+            Xamarin.FormsGoogleMaps.Init(ApiKeys.GOOGLE_MAPS_IOS_API_KEY);
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

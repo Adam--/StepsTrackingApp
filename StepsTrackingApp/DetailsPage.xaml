@@ -5,158 +5,188 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-  <ScrollView>
-    <Grid Padding="38,0,38,29" RowSpacing="18" ColumnSpacing="24">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="120" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="150" />
-            <RowDefinition Height="150" />
-            <RowDefinition Height="200" />
-        </Grid.RowDefinitions>
+    <ScrollView>
+        <Grid
+            Padding="38,0,38,29"
+            ColumnSpacing="24"
+            RowSpacing="18">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="200" />
+            </Grid.RowDefinitions>
 
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="*" />
-        <ColumnDefinition Width="*" />
-      </Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-      <ContentView
-            x:Name="MenuButton"
-            Grid.Row="0"
-            Grid.ColumnSpan="2"
-            Margin="-8,29,0,0"
-            HeightRequest="32"
-            HorizontalOptions="Start"
-            VerticalOptions="Start"
-            WidthRequest="32">
-            <ContentView.GestureRecognizers>
-                <TapGestureRecognizer Tapped="MenuTapGestureRecognizer_Tapped" />
-            </ContentView.GestureRecognizers>
-            <ffimageloadingsvg:SvgCachedImage
-                HeightRequest="14"
-                HorizontalOptions="Center"
-                Source="resource://StepsTrackingApp.Resources.menu.svg"
-                VerticalOptions="Center"
-                WidthRequest="14" />
-        </ContentView>
-      
-      <Label
-            Grid.Row="0"
-            Grid.ColumnSpan="2"
-            Margin="0"
-            Style="{StaticResource Title}"
-            Text="Day data."
-            VerticalOptions="End" />
-      <Label
-            Grid.Row="1"
-            Grid.ColumnSpan="2"
-            Margin="0,-18,0,0"
-            Style="{StaticResource Subtitle}"
-            Text="Sunday, October 13"
-            VerticalOptions="End" />
+            <ContentView
+                x:Name="MenuButton"
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                Margin="-8,29,0,0"
+                HeightRequest="32"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                WidthRequest="32">
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="MenuTapGestureRecognizer_Tapped" />
+                </ContentView.GestureRecognizers>
+                <ffimageloadingsvg:SvgCachedImage
+                    HeightRequest="14"
+                    HorizontalOptions="Center"
+                    Source="resource://StepsTrackingApp.Resources.menu.svg"
+                    VerticalOptions="Center"
+                    WidthRequest="14" />
+            </ContentView>
 
-      
-      
-      <Grid Grid.Row="2" Grid.Column="0" BackgroundColor="#F5F5F5" Padding="14,10,10,16" RowSpacing="0">
-        <Grid.RowDefinitions>
-          <RowDefinition Height="*" />
-          <RowDefinition Height="Auto" />
-          <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
+            <Label
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                Margin="0"
+                Style="{StaticResource Title}"
+                Text="Day data."
+                VerticalOptions="End" />
+            <Label
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                Margin="0,-18,0,0"
+                Style="{StaticResource Subtitle}"
+                Text="Sunday, October 13"
+                VerticalOptions="End" />
 
-        <ffimageloadingsvg:SvgCachedImage
-            Grid.Row="0"
-            VerticalOptions="Start"
-            HorizontalOptions="End"
-            WidthRequest="34"
-            Source="resource://StepsTrackingApp.Resources.sneaker.svg"/>
-        <Label
-            Grid.Row="1"
-            Text="Steps"
-            Style="{StaticResource Subtitle}"/>
-        <Label
-            Grid.Row="2"
-            Text="15,755"
-            Style="{StaticResource LittleData}" />
-        
 
-      </Grid>
-      
-      <Grid Grid.Row="2" Grid.Column="1" BackgroundColor="#333A58" Padding="14,10,10,16" RowSpacing="0">
-        <Grid.RowDefinitions>
-          <RowDefinition Height="*" />
-          <RowDefinition Height="Auto" />
-          <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        
-        <ffimageloadingsvg:SvgCachedImage
-            Grid.Row="0"
-            VerticalOptions="Start"
-            HorizontalOptions="End"
-            WidthRequest="34"
-            Source="resource://StepsTrackingApp.Resources.map.svg"/>
-        <Label
-            Grid.Row="1"
-            Text="Distance"
-            Style="{StaticResource SubtitleLight}"/>
-        <Label
-            Grid.Row="2"
-            Text="7.5 mi"
-            Style="{StaticResource LittleDataLight}" />
 
-      </Grid>
+            <Grid
+                Grid.Row="2"
+                Grid.Column="0"
+                Padding="14,10,10,16"
+                BackgroundColor="#F5F5F5"
+                RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
 
-      <Grid Grid.Row="3" Grid.Column="0" BackgroundColor="#679470" Padding="14,10,10,16" RowSpacing="0">
-        <Grid.RowDefinitions>
-          <RowDefinition Height="*" />
-          <RowDefinition Height="Auto" />
-          <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
+                <ffimageloadingsvg:SvgCachedImage
+                    Grid.Row="0"
+                    HorizontalOptions="End"
+                    Source="resource://StepsTrackingApp.Resources.sneaker.svg"
+                    VerticalOptions="Start"
+                    WidthRequest="34" />
+                <Label
+                    Grid.Row="1"
+                    Style="{StaticResource Subtitle}"
+                    Text="Steps" />
+                <Label
+                    Grid.Row="2"
+                    Style="{StaticResource LittleData}"
+                    Text="15,755" />
 
-        <ffimageloadingsvg:SvgCachedImage
-            Grid.Row="0"
-            VerticalOptions="Start"
-            HorizontalOptions="End"
-            WidthRequest="34"
-            Source="resource://StepsTrackingApp.Resources.clock.svg"/>
-        <Label
-            Grid.Row="1"
-            Text="Time"
-            Style="{StaticResource SubtitleLight}" />
-        <Label
-            Grid.Row="2"
-            Text="1h 48m"
-            Style="{StaticResource LittleDataLight}" />
-        
-      </Grid>
 
-      <Grid Grid.Row="3" Grid.Column="1" BackgroundColor="#C9A55F" Padding="14,10,10,16" RowSpacing="0">
-        <Grid.RowDefinitions>
-          <RowDefinition Height="*" />
-          <RowDefinition Height="Auto" />
-          <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
+            </Grid>
 
-        <ffimageloadingsvg:SvgCachedImage
-            Grid.Row="0"
-            VerticalOptions="Start"
-            HorizontalOptions="End"
-            WidthRequest="34"
-            Source="resource://StepsTrackingApp.Resources.pulse.svg"/>
-        <Label
-            Grid.Row="1"
-            Text="Pulse"
-            Style="{StaticResource SubtitleLight}"/>
-        <Label
-            Grid.Row="2"
-            Text="125 bpm"
-            Style="{StaticResource LittleDataLight}" />
-        
-      </Grid>
+            <Grid
+                Grid.Row="2"
+                Grid.Column="1"
+                Padding="14,10,10,16"
+                BackgroundColor="#333A58"
+                RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
 
-      <ContentView Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Cyan" />
-    </Grid>
-  </ScrollView>
+                <ffimageloadingsvg:SvgCachedImage
+                    Grid.Row="0"
+                    HorizontalOptions="End"
+                    Source="resource://StepsTrackingApp.Resources.map.svg"
+                    VerticalOptions="Start"
+                    WidthRequest="34" />
+                <Label
+                    Grid.Row="1"
+                    Style="{StaticResource SubtitleLight}"
+                    Text="Distance" />
+                <Label
+                    Grid.Row="2"
+                    Style="{StaticResource LittleDataLight}"
+                    Text="7.5 mi" />
+
+            </Grid>
+
+            <Grid
+                Grid.Row="3"
+                Grid.Column="0"
+                Padding="14,10,10,16"
+                BackgroundColor="#679470"
+                RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <ffimageloadingsvg:SvgCachedImage
+                    Grid.Row="0"
+                    HorizontalOptions="End"
+                    Source="resource://StepsTrackingApp.Resources.clock.svg"
+                    VerticalOptions="Start"
+                    WidthRequest="34" />
+                <Label
+                    Grid.Row="1"
+                    Style="{StaticResource SubtitleLight}"
+                    Text="Time" />
+                <Label
+                    Grid.Row="2"
+                    Style="{StaticResource LittleDataLight}"
+                    Text="1h 48m" />
+
+            </Grid>
+
+            <Grid
+                Grid.Row="3"
+                Grid.Column="1"
+                Padding="14,10,10,16"
+                BackgroundColor="#C9A55F"
+                RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <ffimageloadingsvg:SvgCachedImage
+                    Grid.Row="0"
+                    HorizontalOptions="End"
+                    Source="resource://StepsTrackingApp.Resources.pulse.svg"
+                    VerticalOptions="Start"
+                    WidthRequest="34" />
+                <Label
+                    Grid.Row="1"
+                    Style="{StaticResource SubtitleLight}"
+                    Text="Pulse" />
+                <Label
+                    Grid.Row="2"
+                    Style="{StaticResource LittleDataLight}"
+                    Text="125 bpm" />
+
+            </Grid>
+
+            <maps:Map
+                x:Name="Map"
+                Grid.Row="4"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                IsShowingUser="true" />
+
+        </Grid>
+    </ScrollView>
 </ContentPage>
