@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\back.svg" />
     <None Remove="Resources\background-bottom-left.svg" />
     <None Remove="Resources\background-top-right.svg" />
     <None Remove="Resources\clock.svg" />
@@ -27,6 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resources\back.svg" />
     <EmbeddedResource Include="Resources\background-bottom-left.svg" />
     <EmbeddedResource Include="Resources\background-top-right.svg" />
     <EmbeddedResource Include="Resources\clock.svg" />

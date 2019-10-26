@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
-             mc:Ignorable="d"
-             x:Class="StepsTrackingApp.MainPage">
+<ContentPage
+    x:Class="StepsTrackingApp.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
 
-    <Grid RowSpacing="0" Padding="0">
+    <Grid Padding="0" RowSpacing="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="120" />
             <RowDefinition Height="Auto" />
@@ -15,55 +16,75 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
-        <ffimageloadingsvg:SvgCachedImage 
-            Grid.Row="0" 
-            Grid.RowSpan="5" 
-            VerticalOptions="Start"
-            HorizontalOptions="End"
-            HeightRequest="258" 
-            WidthRequest="159" 
-            Margin="0,-10,-10,0"
-            Source="resource://StepsTrackingApp.Resources.background-top-right.svg"/>
-        <ffimageloadingsvg:SvgCachedImage 
-            Grid.Row="0" 
-            Grid.RowSpan="5" 
-            VerticalOptions="End"
-            HorizontalOptions="Start"
-            HeightRequest="475" 
-            WidthRequest="366" 
-            Margin="-10,0,0,-10"
-            Source="resource://StepsTrackingApp.Resources.background-bottom-left.svg"/>
 
-        <ContentView 
-            x:Name="MenuButton"             
+        <ffimageloadingsvg:SvgCachedImage
             Grid.Row="0"
-            Margin="29"
-            HeightRequest="32"
-            WidthRequest="32"
+            Grid.RowSpan="5"
+            Margin="0,-10,-10,0"
+            HeightRequest="258"
+            HorizontalOptions="End"
+            Source="resource://StepsTrackingApp.Resources.background-top-right.svg"
+            VerticalOptions="Start"
+            WidthRequest="159" />
+        <ffimageloadingsvg:SvgCachedImage
+            Grid.Row="0"
+            Grid.RowSpan="5"
+            Margin="-10,0,0,-10"
+            HeightRequest="475"
             HorizontalOptions="Start"
-            VerticalOptions="Start">
+            Source="resource://StepsTrackingApp.Resources.background-bottom-left.svg"
+            VerticalOptions="End"
+            WidthRequest="366" />
+
+        <ContentView
+            x:Name="MenuButton"
+            Grid.Row="0"
+            Margin="10"
+            HeightRequest="70"
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            WidthRequest="70">
             <ContentView.GestureRecognizers>
                 <TapGestureRecognizer Tapped="MenuTapGestureRecognizer_Tapped" />
             </ContentView.GestureRecognizers>
             <ffimageloadingsvg:SvgCachedImage
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
                 HeightRequest="14"
-                WidthRequest="14"            
-                Source="resource://StepsTrackingApp.Resources.menu.svg" />
+                HorizontalOptions="Center"
+                Source="resource://StepsTrackingApp.Resources.menu.svg"
+                VerticalOptions="Center"
+                WidthRequest="14" />
         </ContentView>
 
-        <Label Grid.Row="0" VerticalOptions="End" Margin="38,0" Text="Hello, Christina." Style="{StaticResource Title}"/>
-        <Label Grid.Row="1" Margin="38,0" VerticalOptions="End" Text="Sunday, October 13" Style="{StaticResource Subtitle}" />
-        <Label Grid.Row="2" Margin="38,0" VerticalOptions="End" Text="8,900" Style="{StaticResource BigData}" />
-        <Label Grid.Row="3" Margin="38,0" VerticalOptions="End" Text="Steps" Style="{StaticResource Subtitle}"/>
+        <Label
+            Grid.Row="0"
+            Margin="38,0"
+            Style="{StaticResource Title}"
+            Text="Hello, Christina."
+            VerticalOptions="End" />
+        <Label
+            Grid.Row="1"
+            Margin="38,0"
+            Style="{StaticResource Subtitle}"
+            Text="Sunday, October 13"
+            VerticalOptions="End" />
+        <Label
+            Grid.Row="2"
+            Margin="38,0"
+            Style="{StaticResource BigData}"
+            Text="8,900"
+            VerticalOptions="End" />
+        <Label
+            Grid.Row="3"
+            Margin="38,0"
+            Style="{StaticResource Subtitle}"
+            Text="Steps"
+            VerticalOptions="End" />
 
         <ffimageloadingsvg:SvgCachedImage
             Grid.Row="4"
             Margin="38"
             HorizontalOptions="Center"
-            Source="resource://StepsTrackingApp.Resources.walking-woman.svg"/>
+            Source="resource://StepsTrackingApp.Resources.walking-woman.svg" />
 
     </Grid>
 
