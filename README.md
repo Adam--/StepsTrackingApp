@@ -21,7 +21,7 @@ Woman walking drawing by Katerina Limpitsouni via [unDraw](https://undraw.co/).
 Traditional Xamarin Forms apps use raster images placed in the Android and iOS projects. Each platform has it's own requirements for supplying multiple DPI images for their various supported display densities. Often these images are originally drawn in a vector format (lines and curves to form shapes). Instead of exporting this vector image to multiple densities of a raster image, it's possible to display the vector image directly in Xamarin Forms. 
 
 ## Using vector images
-To achieve this I use (FFImageLoading)[https://github.com/luberda-molinet/FFImageLoading], which supports rendering scalable vector graphics (SVG). This library is a must have for images. SVG support is just one in a long list of helpful features.
+To achieve this I use [FFImageLoading](https://github.com/luberda-molinet/FFImageLoading), which supports rendering scalable vector graphics (SVG). This library is a must have for images. SVG support is just one in a long list of helpful features.
 
 To display an SVG image in your app add a reference to the library and an `SvgCachedImage` specifying the location of the image:
 
@@ -48,6 +48,6 @@ To reference this file in XAML use `resource://` followed by fully qualified loc
 
 ## Map image on details page
 
-In the original concept, there is a stylized image of the map. To get this image, the app requests the phones location then calls a (mapbox)[https://www.mapbox.com/] API. I chose mapbox due to it's simplicity.
+In the original concept, there is a stylized image of the map. To get this image, the app requests the phones location then calls a [mapbox](https://www.mapbox.com/) API. I chose mapbox due to it's simplicity.
 
 To use the API you must supply an API key. Sign up for a key and add it to a new file called ApiKeys. The .gitignore file is setup to ignore this file.
